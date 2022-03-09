@@ -1,0 +1,40 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" dir="rtl">
+<head runat="server" >
+    <title>האתר של איתמר</title>
+</head>
+<body style="background: #cccccc;" >
+    <form id="form1" runat="server" onsubmit="return check()">
+        <table style="width: 100%; border:0 ; height: 100%;"100%" border="0" bordercolor="gray">
+            <tr>
+                <td style="width: 302px; height: 152px;" colspan="2" align="center">
+                <img src="Images/logo.bmp"alt="logo"/>
+                </td>
+            </tr>
+            <tr>
+            <td style="width: 107px; height: 770px;" valign="top" align="right">
+                <a href="default.aspx"><img src="Images/homePage.bmp" alt="לדף הבית" /></a><br />
+                <a href="abote.aspx"><img src="Images/abote.bmp" alt="אודות" /></a><br />
+                <a href="carictors.aspx"><img src="Images/carictors.bmp" alt="הדמויות" /></a><br />
+                <a href="register.aspx"><img src="Images/Register.bmp" alt="להרשמה" /></a><br />
+                <a href="login.aspx"><img src="Images/login.bmp" alt="להתחברות" /></a><br />
+                <a href="userQueries.aspx"><img src="Images/Queries.bmp" alt="שאילתות" /></a><br />
+                <a href="bender.aspx"><img src="Images/bender.bmp" alt="בנדר"></a><br />
+                <a href="theMovie.aspx"><img src="Images/TheMovie.bmp" alt="הסרט" /></a>
+                <br /><%
+                         Response.Write(Application["counter"]);
+                      %>:מספר כניסות
+                </td>
+                <td style="height: 770px; " valign="top" >
+                         <asp:contentplaceholder id="ContentPlaceHolder" runat="server">
+                         </asp:contentplaceholder>
+                </td>
+                
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
